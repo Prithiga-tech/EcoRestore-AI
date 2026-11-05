@@ -139,7 +139,7 @@ Generate reports containing observations, evidence, activities, priority informa
 
 ---
 
-## 📌 Project at a Glance
+## 📌 Short Project overview at a Glance
 
 | Category | Details |
 |---|---|
@@ -349,24 +349,6 @@ flowchart TB
 
 ---
 
-## 📊 Priority Scoring Model
-
-The project uses a transparent weighted scoring approach based on four criteria:
-
-```text
-Priority Score =
-    0.35 × Severity
-  + 0.25 × Affected Area
-  + 0.25 × Ecological Sensitivity
-  + 0.15 × Recurrence
-```
-
-The purpose of this score is to provide a transparent screening mechanism for identifying monitoring zones that may require further environmental assessment.
-
-It is **not intended to automatically prescribe a restoration treatment**.
-
----
-
 ## 🔎 Evidence-Completeness Gate
 
 A central concept of EcoRestore-AI is the **Evidence-Completeness Gate**.
@@ -403,12 +385,16 @@ This helps prevent incomplete observations from being treated as if they were co
 ### OpenStreetMap
 
 Used for geographic discovery and mapped boundary information.
+<img src="https://github.com/user-attachments/assets/17bead1d-b1ad-4017-8347-b023deccb90a" width="850">
 
 ### Sentinel-2
 
 Used as supplementary satellite-based environmental context.
 
 The project documentation includes satellite scene inspection and spectral analysis workflows, including NDWI- and NDVI-based analysis.
+
+<img width="426" height="417" alt="image" src="https://github.com/user-attachments/assets/1e8c7844-e368-41e0-9537-ed275e23f5d4" />
+
 
 ### Open-Meteo
 
@@ -423,7 +409,7 @@ Used to provide weather-related environmental context for monitoring records.
 | Module | Purpose |
 |---|---|
 | Dashboard | Provides an overview of project and monitoring information |
-| Lake Registry | Manages lake records |
+| Lake Registry | Register the lake and Manages lake records |
 | Monitoring Zones | Defines and manages monitoring areas |
 | Field Observation | Records environmental observations |
 | Image Records | Stores supporting observation photographs and metadata |
@@ -598,7 +584,7 @@ Application demonstration media is available through the project demonstration l
 
 ### Animated Workflow
 
-A GIF can be added later to demonstrate the complete application flow:
+A GIF is added  to demonstrate the complete application flow:
 
 ```text
 Field Observation
@@ -613,22 +599,6 @@ Follow-Up Monitoring
        ↓
 Report Generation
 ```
-
-**Suggested future asset:**
-
-```text
-assets/ecorestore-workflow.gif
-```
-
-Once the GIF is available, it can be embedded directly here:
-
-```html
-<p align="center">
-  <img src="assets/ecorestore-workflow.gif" width="850">
-</p>
-```
-
----
 
 ## 🧪 Testing & Validation
 
@@ -792,18 +762,6 @@ Potential future improvements include:
 
 ---
 
-## 👥 Project Team
-
-| Member | Registration Number |
-|---|---|
-| Lakshmi B | 23MID0401 |
-| Divya P | 23MIC0125 |
-| Prithiga V | 23MIC0108 |
-
-**Guide:** Biji C L
-
----
-
 ## 🎓 Academic Context
 
 | Category | Details |
@@ -871,7 +829,6 @@ The central goal is not to replace environmental expertise, but to provide a tra
 
 </div>
 
-  
 ---
 
 <div>
@@ -883,5 +840,14 @@ The central goal is not to replace environmental expertise, but to provide a tra
 **Academic Project • Environmental Decision Support • Source Code Private**
 
 </div>
+
+## 👥 Project Team
+
+- Prithiga-tech
+- Lakshmi 
+- Divya 
+
+
+
 
 

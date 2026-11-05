@@ -874,3 +874,9 @@ The central goal is not to replace environmental expertise, but to provide a tra
 **Academic Project • Environmental Decision Support • Source Code Private**
 
 </div>
+
+<div align="center">
+
+<img src="assets/ecorestore-workflow.gif" width="850">
+
+</div>

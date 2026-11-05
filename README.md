@@ -578,7 +578,7 @@ The following screenshots document the major application workflows.
 
 ### Video Demo
 
-Application demonstration media is available through the project demonstration link.
+🎥 **Project Demo:** [Watch EcoRestore AI Demo](https://drive.google.com/file/d/1rbp8letJWeoSr9eXvV6X0sLV4aaF_fwb/view?usp=drivesdk )
 
 > The public repository currently contains documentation and screenshots. The complete source code remains private.
 
@@ -843,11 +843,7 @@ The central goal is not to replace environmental expertise, but to provide a tra
 
 ## 👥 Project Team
 
-- Prithiga-tech
-- Lakshmi 
-- Divya 
-
-
-
-
+- **Prithiga-tech**
+- **Lakshmi**
+- **Divya**
 

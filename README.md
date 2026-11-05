@@ -14,10 +14,18 @@
 <p>
   <img src="https://img.shields.io/badge/Project-Academic%20Project-6C63FF?style=flat-square">
   <img src="https://img.shields.io/badge/Domain-Environmental%20Monitoring-2E8B57?style=flat-square">
-  <img src="https://img.shields.io/badge/Status-Documentation%20%26%20Demo-FFB000?style=flat-square">
+  <img src="https://img.shields.io/badge/Source%20Code-Private-8B5CF6?style=flat-square">
+  <img src="https://img.shields.io/badge/Status-Demonstrated-FFB000?style=flat-square">
 </p>
 
 **An evidence-aware environmental decision-support system for organizing lake observations, assessing evidence completeness, prioritizing monitoring zones, tracking restoration activities, and supporting follow-up monitoring.**
+
+<br>
+
+<a href="#-project-overview">Project Overview</a> •
+<a href="#-application-gallery">Gallery</a> •
+<a href="#-system-workflow">Workflow</a> •
+<a href="#-technology-stack">Technology</a>
 
 </div>
 
@@ -27,26 +35,33 @@
 
 <div align="center">
 
-<img src="screenshots/dashboard.png" width="900">
+<img src="screenshots/dashboard.png" width="850">
 
 <br>
 
 **EcoRestore-AI Executive Dashboard**
 
 </div>
-</div>
 
 ---
 
-## Overview
+## 🌿 Project Overview
 
 Urban lakes can experience problems such as waste accumulation, algal growth, damaged shoreline vegetation, and other local disturbances.
 
 In many monitoring situations, field observations, photographs, restoration activities, and follow-up records may be stored separately. This can make it difficult to compare observations, identify incomplete evidence, track activities, and understand which monitoring zones require further attention.
 
-**EcoRestore-AI** addresses this workflow problem by providing a structured environment for collecting observations, validating records, applying transparent priority scoring, monitoring evidence completeness, tracking restoration activities, and generating reports.
+**EcoRestore-AI** addresses this workflow problem by providing a structured environment for:
 
-The system is designed as **decision support**. It does not physically restore a lake and does not replace environmental experts or their decisions.
+- Collecting field observations
+- Organizing environmental evidence
+- Validating evidence completeness
+- Applying transparent priority scoring
+- Monitoring restoration activities
+- Tracking follow-up observations
+- Generating auditable reports
+
+> **Important:** EcoRestore-AI is a decision-support system. It does not physically restore a lake, replace environmental experts, or automatically prescribe restoration treatments.
 
 ---
 
@@ -54,61 +69,69 @@ The system is designed as **decision support**. It does not physically restore a
 
 <table>
 <tr>
-<td width="50%">
+<td width="50%" valign="top">
 
 ### 🌊 Lake Management
+
 Manage lakes, monitoring zones, boundaries, and environmental records.
 
 </td>
-<td width="50%">
+<td width="50%" valign="top">
 
 ### 📋 Field Observations
-Record field measurements, observations, photographs, and ecological notes.
+
+Record measurements, observations, photographs, severity, recurrence, and ecological notes.
 
 </td>
 </tr>
 
 <tr>
-<td width="50%">
+<td width="50%" valign="top">
 
 ### 📊 Priority Scoring
-Apply transparent weighted scoring to help identify monitoring zones requiring attention.
+
+Apply transparent weighted scoring to identify monitoring zones requiring further attention.
 
 </td>
-<td width="50%">
+<td width="50%" valign="top">
 
 ### 🔎 Evidence Gate
+
 Identify incomplete or insufficient evidence before recommendations are reviewed.
 
 </td>
 </tr>
 
 <tr>
-<td width="50%">
+<td width="50%" valign="top">
 
-### 🛰️ Satellite Analysis
-Use Sentinel-2 imagery and spectral indicators such as NDWI and NDVI as supplementary evidence.
+### 🛰️ Environmental Data
+
+Use geographic, satellite, and weather information as supplementary environmental context.
 
 </td>
-<td width="50%">
+<td width="50%" valign="top">
 
 ### 🤖 Controlled AI
+
 Provide local AI assistance through an Ollama-based controlled tool layer.
 
 </td>
 </tr>
 
 <tr>
-<td width="50%">
+<td width="50%" valign="top">
 
 ### 📈 Follow-Up Monitoring
-Track restoration activities and subsequent observations.
+
+Connect baseline observations with subsequent monitoring and restoration activities.
 
 </td>
-<td width="50%">
+<td width="50%" valign="top">
 
 ### 📄 Auditable Reports
-Generate reports containing observations, evidence, activities, and monitoring information.
+
+Generate reports containing observations, evidence, activities, priority information, and follow-up records.
 
 </td>
 </tr>
@@ -116,16 +139,46 @@ Generate reports containing observations, evidence, activities, and monitoring i
 
 ---
 
-## Key Features
+## 📌 Project at a Glance
 
-### Lake and Monitoring-Zone Management
+| Category | Details |
+|---|---|
+| **Project Type** | Desktop Decision-Support Application |
+| **Domain** | Environmental Monitoring / Urban Lake Restoration |
+| **Programming Language** | Python |
+| **Desktop Interface** | PySide6 |
+| **Database** | SQLite |
+| **ORM / Data Access** | SQLAlchemy |
+| **Local AI** | Ollama |
+| **Satellite Context** | Sentinel-2 |
+| **Weather Context** | Open-Meteo |
+| **Geographic Context** | OpenStreetMap |
+| **Decision Model** | Transparent Weighted Priority Scoring |
+| **Evidence Control** | COMPLETE / PARTIAL / INSUFFICIENT |
+| **Source Code** | Private |
+| **Current Status** | Demonstrated |
+
+---
+
+## 🚀 Key Features
+
+<details>
+<summary><b>🌊 Lake and Monitoring-Zone Management</b></summary>
+
+<br>
 
 - Maintain structured lake records
-- Divide a selected lake into manageable monitoring zones
+- Divide a selected lake into monitoring zones
 - Store zone-specific observations
 - Organize monitoring information for later comparison
+- Maintain geographic and monitoring-related information
 
-### Field Observation Management
+</details>
+
+<details>
+<summary><b>📋 Field Observation Management</b></summary>
+
+<br>
 
 Observations can contain:
 
@@ -139,9 +192,14 @@ Observations can contain:
 - Supporting photographs
 - Human-entered annotations
 
-### Evidence-Aware Assessment
+</details>
 
-The system evaluates whether the required evidence is available and sufficiently complete before a recommendation is considered ready for review.
+<details>
+<summary><b>🔎 Evidence-Aware Assessment</b></summary>
+
+<br>
+
+The system evaluates whether required evidence is available and sufficiently complete before a recommendation is considered ready for review.
 
 The evidence-completeness workflow helps identify:
 
@@ -150,7 +208,12 @@ The evidence-completeness workflow helps identify:
 - Outdated evidence
 - Records requiring further review
 
-### Transparent Priority Scoring
+</details>
+
+<details>
+<summary><b>📊 Transparent Priority Scoring</b></summary>
+
+<br>
 
 Monitoring zones are prioritized using four weighted criteria:
 
@@ -165,41 +228,27 @@ The weights are configurable/provisional and require appropriate guide or expert
 
 The score is designed to make the contribution of individual criteria inspectable rather than hiding the prioritization logic inside an opaque model.
 
+</details>
+
 <details>
-<summary><b>🔬 View Priority Scoring Methodology</b></summary>
+<summary><b>🛰️ Environmental Data Integration</b></summary>
 
 <br>
 
-EcoRestore-AI uses four weighted criteria:
-
-| Criterion | Weight |
-|---|---:|
-| Severity | 35% |
-| Affected Area | 25% |
-| Ecological Sensitivity | 25% |
-| Recurrence | 15% |
-
-```text
-Priority Score =
-0.35 × Severity
-+ 0.25 × Affected Area
-+ 0.25 × Ecological Sensitivity
-+ 0.15 × Recurrence
-
-</details>
-```
-
-### Environmental Data Integration
-
 The project incorporates complementary environmental context through:
 
-- OpenStreetMap services for geographic and mapped boundary information
+- OpenStreetMap services
 - Sentinel-2 satellite imagery
 - Open-Meteo weather data
 
 These sources provide geographic, spectral, and meteorological context for monitoring.
 
-### Restoration Activity Tracking
+</details>
+
+<details>
+<summary><b>🌱 Restoration Activity Tracking</b></summary>
+
+<br>
 
 The system can record:
 
@@ -211,13 +260,23 @@ The system can record:
 - Notes
 - Supporting evidence
 
-### Follow-Up Monitoring
+</details>
+
+<details>
+<summary><b>📈 Follow-Up Monitoring</b></summary>
+
+<br>
 
 Baseline and follow-up observations can be connected to support comparison over time.
 
 The system reports observed changes without claiming that a particular restoration activity caused those changes.
 
-### Controlled Local AI Assistance
+</details>
+
+<details>
+<summary><b>🤖 Controlled Local AI Assistance</b></summary>
+
+<br>
 
 EcoRestore-AI includes a controlled local AI assistant design using **Ollama**.
 
@@ -225,31 +284,20 @@ The AI layer is designed around defined tools and deterministic fallback behavio
 
 Important decision-support functions such as evidence assessment and priority scoring remain independent of language-model availability.
 
+</details>
+
 <details>
-<summary><b>🧪 View Testing</b></summary>
+<summary><b>📄 Report Generation</b></summary>
 
 <br>
 
-The project documentation includes:
-
-- Unit testing
-- Integration testing
-- Workflow checks
-- Manual verification
-
-<img src="screenshots/unit-testing.png" width="850">
-
-<img src="screenshots/integration-testing.png" width="850">
+The system supports the generation of auditable restoration-related reports containing relevant observations, evidence, activities, priority information, and follow-up records.
 
 </details>
 
-### Report Generation
-
-The system supports the generation of auditable restoration-related reports containing relevant observations, evidence, activities, priority information, and follow-up records.
-
 ---
 
-## System Workflow
+## 🔄 System Workflow
 
 ```mermaid
 flowchart LR
@@ -260,36 +308,48 @@ flowchart LR
     E --> F[Restoration Activity]
     F --> G[Follow-Up Monitoring]
     G --> H[Reports]
+
+    H -.-> G
+    G -.-> A
 ```
+
+### Workflow Summary
+
+**Observe → Validate → Assess Evidence → Score → Prioritize → Track Activity → Monitor → Report**
 
 ---
 
-## System Architecture
+## 🏗️ System Architecture
 
 ```mermaid
 flowchart TB
+
     U[Environmental Team / User]
 
     U --> UI[EcoRestore-AI Desktop Interface]
 
     UI --> APP[Application Logic]
 
-    APP --> DB[(Structured Database)]
+    APP --> DB[(SQLite Database)]
 
     APP --> GEO[OpenStreetMap]
     APP --> WEATHER[Open-Meteo]
     APP --> SAT[Sentinel-2]
-    APP --> AI[Controlled Ollama AI Layer]
 
     APP --> SCORE[Priority Scoring]
     APP --> EVIDENCE[Evidence-Completeness Gate]
-    APP --> REPORT[Report Generation]
     APP --> MONITOR[Follow-Up Monitoring]
+    APP --> REPORT[Report Generation]
+
+    APP --> AI[Controlled Ollama AI Layer]
+
+    AI --> TOOLS[Approved Tools / Controlled Actions]
+    TOOLS --> APP
 ```
 
 ---
 
-## Priority Scoring Model
+## 📊 Priority Scoring Model
 
 The project uses a transparent weighted scoring approach based on four criteria:
 
@@ -307,41 +367,38 @@ It is **not intended to automatically prescribe a restoration treatment**.
 
 ---
 
-## Evidence-Completeness Gate
+## 🔎 Evidence-Completeness Gate
 
 A central concept of EcoRestore-AI is the **Evidence-Completeness Gate**.
 
 Before a recommendation is considered ready for review, the system checks whether the required evidence is available.
 
-The gate can identify conditions such as:
-
 ```text
-COMPLETE
-   ↓
-Required evidence available
-   ↓
-Ready for review
-
-
-PARTIAL
-   ↓
-Some required evidence available
-   ↓
-Additional evidence recommended
-
-
-INSUFFICIENT
-   ↓
-Important evidence missing or inadequate
-   ↓
-Further data collection required
+              Evidence Assessment
+                      │
+          ┌───────────┼───────────┐
+          ↓           ↓           ↓
+      COMPLETE      PARTIAL   INSUFFICIENT
+          │           │           │
+          ↓           ↓           ↓
+     Ready for     Additional   Further Data
+       Review       Evidence     Collection
+                     Needed       Required
 ```
+
+### Evidence States
+
+| State | Meaning | Action |
+|---|---|---|
+| **COMPLETE** | Required evidence is available | Ready for review |
+| **PARTIAL** | Some evidence is available | Additional evidence recommended |
+| **INSUFFICIENT** | Important evidence is missing or inadequate | Further data collection required |
 
 This helps prevent incomplete observations from being treated as if they were complete environmental evidence.
 
 ---
 
-## Environmental Data Sources
+## 🌍 Environmental Data Sources
 
 ### OpenStreetMap
 
@@ -357,11 +414,11 @@ The project documentation includes satellite scene inspection and spectral analy
 
 Used to provide weather-related environmental context for monitoring records.
 
-These external sources complement manually collected field observations rather than replacing them.
+> These external sources complement manually collected field observations rather than replacing them.
 
 ---
 
-## Application Modules
+## 🧩 Application Modules
 
 | Module | Purpose |
 |---|---|
@@ -381,68 +438,167 @@ These external sources complement manually collected field observations rather t
 
 ---
 
-## 📸 Application Gallery
+# 📸 Application Gallery
+
+The following screenshots document the major application workflows.
+
+## 🌊 Lake & Monitoring Management
+
+<details>
+<summary><b>View Lake Management Screenshots</b></summary>
+
+<br>
 
 ### Executive Dashboard
 
-<img src="screenshots/dashboard.png" width="900">
+<p align="center">
+  <img src="screenshots/dashboard.png" width="850">
+</p>
 
 ### Lake Registry
 
-<img src="screenshots/lake-registry.png" width="900">
+<p align="center">
+  <img src="screenshots/lake-registry.png" width="850">
+</p>
+
+### Lake Boundary
+
+<p align="center">
+  <img src="screenshots/lake-boundary.png" width="850">
+</p>
 
 ### Monitoring Zones
 
-<img src="screenshots/monitoring-zones.png" width="900">
+<p align="center">
+  <img src="screenshots/monitoring-zones.png" width="850">
+</p>
 
 ### Field Observations
 
-<img src="screenshots/field-observations.png" width="900">
+<p align="center">
+  <img src="screenshots/field-observations.png" width="850">
+</p>
 
-### Environmental Data
+</details>
 
-<img src="screenshots/open-meteo.png" width="900">
+---
 
-### Sentinel-2 Analysis
+## 🛰️ Environmental Data & Analysis
 
-<img src="screenshots/sentinel2.png" width="900">
+<details>
+<summary><b>View Environmental Analysis Screenshots</b></summary>
+
+<br>
+
+### Open-Meteo Weather Context
+
+<p align="center">
+  <img src="screenshots/open-meteo.png" width="850">
+</p>
+
+### Sentinel-2
+
+<p align="center">
+  <img src="screenshots/sentinel2.png" width="850">
+</p>
 
 ### NDWI Analysis
 
-<img src="screenshots/ndwi.png" width="900">
+<p align="center">
+  <img src="screenshots/ndwi.png" width="850">
+</p>
 
 ### NDVI Analysis
 
-<img src="screenshots/ndvi.png" width="900">
+<p align="center">
+  <img src="screenshots/ndvi.png" width="850">
+</p>
+
+</details>
+
+---
+
+## 📊 Decision Support
+
+<details>
+<summary><b>View Priority & Evidence Screenshots</b></summary>
+
+<br>
 
 ### Priority Scoring
 
-<img src="screenshots/priority-scoring.png" width="900">
+<p align="center">
+  <img src="screenshots/priority-scoring.png" width="850">
+</p>
 
 ### Evidence Completeness
 
-<img src="screenshots/evidence-gate.png" width="900">
+<p align="center">
+  <img src="screenshots/evidence-gate.png" width="850">
+</p>
+
+### Evidence Gate Outcome
+
+<p align="center">
+  <img src="screenshots/evidence-gate-outcome.png" width="850">
+</p>
+
+### Follow-Up Tasks
+
+<p align="center">
+  <img src="screenshots/follow-up-tasks.png" width="850">
+</p>
+
+</details>
+
+---
+
+## 🤖 AI, Reports & Testing
+
+<details>
+<summary><b>View AI, Reporting and Testing Screenshots</b></summary>
+
+<br>
 
 ### AI Assistant
 
-<img src="screenshots/ai-assistant.png" width="900">
+<p align="center">
+  <img src="screenshots/ai-assistant.png" width="850">
+</p>
 
 ### Report Generation
 
-<img src="screenshots/report-generation.png" width="900">
+<p align="center">
+  <img src="screenshots/report-generation.png" width="850">
+</p>
+
+### Unit Testing
+
+<p align="center">
+  <img src="screenshots/unit-testing.png" width="850">
+</p>
+
+### Integration Testing
+
+<p align="center">
+  <img src="screenshots/integration-testing.png" width="850">
+</p>
+
+</details>
+
 ---
 
-## Demonstration
-
-> Application demonstration media will be added to this repository.
+## 🎬 Demonstration
 
 ### Video Demo
 
-[Watch the EcoRestore-AI demonstration](#)
+Application demonstration media is available through the project demonstration link.
+
+> The public repository currently contains documentation and screenshots. The complete source code remains private.
 
 ### Animated Workflow
 
-A GIF demonstrating the major application workflow can be added here:
+A GIF can be added later to demonstrate the complete application flow:
 
 ```text
 Field Observation
@@ -458,26 +614,68 @@ Follow-Up Monitoring
 Report Generation
 ```
 
+**Suggested future asset:**
+
+```text
+assets/ecorestore-workflow.gif
+```
+
+Once the GIF is available, it can be embedded directly here:
+
+```html
+<p align="center">
+  <img src="assets/ecorestore-workflow.gif" width="850">
+</p>
+```
+
 ---
 
-## Technology Stack
+## 🧪 Testing & Validation
+
+The project documentation describes evaluation through:
+
+- Automated unit testing
+- Integration testing
+- Workflow checks
+- Manual verification of application behaviour
+
+These tests are intended to verify individual components as well as the overall application workflow.
+
+<details>
+<summary><b>View Testing Evidence</b></summary>
+
+<br>
+
+<p align="center">
+  <img src="screenshots/unit-testing.png" width="850">
+</p>
+
+<p align="center">
+  <img src="screenshots/integration-testing.png" width="850">
+</p>
+
+</details>
+
+---
+
+## 💻 Technology Stack
 
 | Layer | Technology |
 |---|---|
-| Programming Language | Python |
-| Desktop UI | PySide6 |
-| Database | SQLite |
-| ORM / Data Access | SQLAlchemy |
-| Local AI | Ollama |
-| Geographic Data | OpenStreetMap |
-| Satellite Data | Sentinel-2 |
-| Weather Data | Open-Meteo |
-| Data Processing | Python-based processing |
-| Testing | Unit Testing and Integration Testing |
+| **Programming Language** | Python |
+| **Desktop UI** | PySide6 |
+| **Database** | SQLite |
+| **ORM / Data Access** | SQLAlchemy |
+| **Local AI** | Ollama |
+| **Geographic Data** | OpenStreetMap |
+| **Satellite Data** | Sentinel-2 |
+| **Weather Data** | Open-Meteo |
+| **Data Processing** | Python-based processing |
+| **Testing** | Unit Testing + Integration Testing |
 
 ---
 
-## Novelty and Key Contribution
+## 💡 Novelty & Key Contribution
 
 EcoRestore-AI combines several environmental monitoring and decision-support functions into one evidence-aware workflow.
 
@@ -503,33 +701,20 @@ The project incorporates a local Ollama-based assistant while keeping essential 
 
 ---
 
-## Testing and Validation
-
-The project documentation describes evaluation through:
-
-- Automated unit testing
-- Integration testing
-- Workflow checks
-- Manual verification of application behaviour
-
-These tests are intended to verify individual components as well as the overall application workflow.
-
----
-
-## Important Project Positioning
+## 🎯 Important Project Positioning
 
 EcoRestore-AI is a **decision-support system**, not an autonomous environmental decision maker.
 
-The system:
+### The system does:
 
-- Organizes environmental evidence
-- Helps identify incomplete evidence
-- Provides transparent priority scoring
-- Supports monitoring workflows
-- Tracks restoration activities
-- Generates reports
+- Organize environmental evidence
+- Identify incomplete evidence
+- Provide transparent priority scoring
+- Support monitoring workflows
+- Track restoration activities
+- Generate reports
 
-The system does **not**:
+### The system does not:
 
 - Physically restore lakes
 - Replace environmental experts
@@ -539,7 +724,7 @@ The system does **not**:
 
 ---
 
-## Current Implementation Status
+## 📌 Current Implementation Status
 
 The project includes documented application workflows covering:
 
@@ -563,13 +748,11 @@ Further refinement and validation can be performed as the project progresses.
 
 ---
 
-<div align="center">
-
-## 📌 Project Status
+## 📍 Project Status
 
 | Component | Status |
 |---|---|
-| Desktop Application | Completed / Demonstrated |
+| Desktop Application | Demonstrated |
 | Lake & Zone Management | Implemented |
 | Field Observation Workflow | Implemented |
 | Priority Scoring | Implemented |
@@ -578,10 +761,11 @@ Further refinement and validation can be performed as the project progresses.
 | AI Assistant | Demonstrated |
 | Report Generation | Demonstrated |
 | Testing | Documented |
+| **Public Source Code** | **Private** |
 
-</div>
+---
 
-## Limitations
+## ⚠️ Limitations
 
 1. Priority-score weights are provisional and require expert review.
 2. Environmental decisions still require domain-expert assessment.
@@ -591,7 +775,7 @@ Further refinement and validation can be performed as the project progresses.
 
 ---
 
-## Future Enhancements
+## 🔮 Future Enhancements
 
 Potential future improvements include:
 
@@ -608,7 +792,7 @@ Potential future improvements include:
 
 ---
 
-## Project Team
+## 👥 Project Team
 
 | Member | Registration Number |
 |---|---|
@@ -620,35 +804,41 @@ Potential future improvements include:
 
 ---
 
-## Academic Context
+## 🎓 Academic Context
 
-**Project:** EcoRestore-AI  
-**Domain:** Environmental Monitoring / Decision Support / AI-Assisted Data Management  
-**Application Type:** Desktop Decision-Support Application
+| Category | Details |
+|---|---|
+| **Project** | EcoRestore-AI |
+| **Domain** | Environmental Monitoring / Decision Support / AI-Assisted Data Management |
+| **Application Type** | Desktop Decision-Support Application |
+| **Project Nature** | Academic Project |
 
 ---
 
-## Source Code Availability
+## 🔐 Source Code Availability
+
+> **Source Code: Private**
 
 This GitHub repository is intended as a **project documentation and demonstration repository**.
 
-The complete application source code is **not publicly included** in this repository.
+The complete application source code is **not publicly included** in this repository because the implementation is currently maintained privately for academic project development.
 
-The repository may contain:
+The repository currently provides:
 
 - Project documentation
-- Architecture diagrams
-- Screenshots
-- Demonstration media
+- System architecture
+- Workflow diagrams
+- Application screenshots
+- Demonstration information
 - Testing documentation
-- Project reports
+- Project status
 - Supporting visual materials
 
-This approach allows the project to be presented professionally while keeping the implementation code private.
+The source code may be added later after the project is finalized and the team confirms its release.
 
 ---
 
-## References
+## 📚 References
 
 The project literature review includes research covering:
 
@@ -665,7 +855,7 @@ Detailed references and DOI information are available in the project report.
 
 ---
 
-## Conclusion
+## 📝 Conclusion
 
 EcoRestore-AI provides a structured and transparent approach to supporting urban lake restoration planning.
 
@@ -677,8 +867,10 @@ The central goal is not to replace environmental expertise, but to provide a tra
 
 <div align="center">
 
-### EcoRestore-AI
+## 🌿 EcoRestore-AI
 
-**Evidence → Assessment → Prioritization → Monitoring → Reporting**
+### Evidence → Assessment → Prioritization → Monitoring → Reporting
+
+**Academic Project • Environmental Decision Support • Source Code Private**
 
 </div>

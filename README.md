@@ -1,20 +1,39 @@
 <div align="center">
 
-# EcoRestore-AI
+# 🌿 EcoRestore-AI
 
-### Evidence-Aware Decision Support and Process Automation for Urban Lake Restoration Prioritization and Monitoring
+### Evidence-Aware Decision Support for Urban Lake Restoration
 
 <p>
-  <img src="https://img.shields.io/badge/Project-Academic%20Project-blue">
-  <img src="https://img.shields.io/badge/Python-3.x-yellow">
-  <img src="https://img.shields.io/badge/PySide6-Desktop%20Application-green">
-  <img src="https://img.shields.io/badge/SQLite-Database-orange">
-  <img src="https://img.shields.io/badge/AI-Ollama-purple">
-  <img src="https://img.shields.io/badge/Status-Documentation%20%26%20Demo-lightgrey">
+  <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white">
+  <img src="https://img.shields.io/badge/PySide6-Desktop-41CD52?style=for-the-badge">
+  <img src="https://img.shields.io/badge/SQLite-Database-003B57?style=for-the-badge&logo=sqlite&logoColor=white">
+  <img src="https://img.shields.io/badge/Ollama-Local%20AI-black?style=for-the-badge">
 </p>
 
-**EcoRestore-AI** is an evidence-aware environmental decision-support system designed to help organize urban lake observations, assess evidence completeness, prioritize monitoring zones, track restoration activities, and support follow-up monitoring.
+<p>
+  <img src="https://img.shields.io/badge/Project-Academic%20Project-6C63FF?style=flat-square">
+  <img src="https://img.shields.io/badge/Domain-Environmental%20Monitoring-2E8B57?style=flat-square">
+  <img src="https://img.shields.io/badge/Status-Documentation%20%26%20Demo-FFB000?style=flat-square">
+</p>
 
+**An evidence-aware environmental decision-support system for organizing lake observations, assessing evidence completeness, prioritizing monitoring zones, tracking restoration activities, and supporting follow-up monitoring.**
+
+</div>
+
+---
+
+## 🖥️ Project Preview
+
+<div align="center">
+
+<img src="screenshots/dashboard.png" width="900">
+
+<br>
+
+**EcoRestore-AI Executive Dashboard**
+
+</div>
 </div>
 
 ---
@@ -28,6 +47,72 @@ In many monitoring situations, field observations, photographs, restoration acti
 **EcoRestore-AI** addresses this workflow problem by providing a structured environment for collecting observations, validating records, applying transparent priority scoring, monitoring evidence completeness, tracking restoration activities, and generating reports.
 
 The system is designed as **decision support**. It does not physically restore a lake and does not replace environmental experts or their decisions.
+
+---
+
+## ✨ Core Capabilities
+
+<table>
+<tr>
+<td width="50%">
+
+### 🌊 Lake Management
+Manage lakes, monitoring zones, boundaries, and environmental records.
+
+</td>
+<td width="50%">
+
+### 📋 Field Observations
+Record field measurements, observations, photographs, and ecological notes.
+
+</td>
+</tr>
+
+<tr>
+<td width="50%">
+
+### 📊 Priority Scoring
+Apply transparent weighted scoring to help identify monitoring zones requiring attention.
+
+</td>
+<td width="50%">
+
+### 🔎 Evidence Gate
+Identify incomplete or insufficient evidence before recommendations are reviewed.
+
+</td>
+</tr>
+
+<tr>
+<td width="50%">
+
+### 🛰️ Satellite Analysis
+Use Sentinel-2 imagery and spectral indicators such as NDWI and NDVI as supplementary evidence.
+
+</td>
+<td width="50%">
+
+### 🤖 Controlled AI
+Provide local AI assistance through an Ollama-based controlled tool layer.
+
+</td>
+</tr>
+
+<tr>
+<td width="50%">
+
+### 📈 Follow-Up Monitoring
+Track restoration activities and subsequent observations.
+
+</td>
+<td width="50%">
+
+### 📄 Auditable Reports
+Generate reports containing observations, evidence, activities, and monitoring information.
+
+</td>
+</tr>
+</table>
 
 ---
 
@@ -80,6 +165,30 @@ The weights are configurable/provisional and require appropriate guide or expert
 
 The score is designed to make the contribution of individual criteria inspectable rather than hiding the prioritization logic inside an opaque model.
 
+<details>
+<summary><b>🔬 View Priority Scoring Methodology</b></summary>
+
+<br>
+
+EcoRestore-AI uses four weighted criteria:
+
+| Criterion | Weight |
+|---|---:|
+| Severity | 35% |
+| Affected Area | 25% |
+| Ecological Sensitivity | 25% |
+| Recurrence | 15% |
+
+```text
+Priority Score =
+0.35 × Severity
++ 0.25 × Affected Area
++ 0.25 × Ecological Sensitivity
++ 0.15 × Recurrence
+
+</details>
+```
+
 ### Environmental Data Integration
 
 The project incorporates complementary environmental context through:
@@ -115,6 +224,24 @@ EcoRestore-AI includes a controlled local AI assistant design using **Ollama**.
 The AI layer is designed around defined tools and deterministic fallback behaviour.
 
 Important decision-support functions such as evidence assessment and priority scoring remain independent of language-model availability.
+
+<details>
+<summary><b>🧪 View Testing</b></summary>
+
+<br>
+
+The project documentation includes:
+
+- Unit testing
+- Integration testing
+- Workflow checks
+- Manual verification
+
+<img src="screenshots/unit-testing.png" width="850">
+
+<img src="screenshots/integration-testing.png" width="850">
+
+</details>
 
 ### Report Generation
 
@@ -254,56 +381,55 @@ These external sources complement manually collected field observations rather t
 
 ---
 
-## Application Screenshots
+## 📸 Application Gallery
 
 ### Executive Dashboard
 
-![EcoRestore-AI Executive Dashboard](screenshots/dashboard.png)
+<img src="screenshots/dashboard.png" width="900">
 
 ### Lake Registry
 
-![Lake Registry](screenshots/lake-registry.png)
+<img src="screenshots/lake-registry.png" width="900">
 
-### Monitoring-Zone Management
+### Monitoring Zones
 
-![Monitoring Zone Management](screenshots/monitoring-zones.png)
+<img src="screenshots/monitoring-zones.png" width="900">
 
-### Field Observation Entry
+### Field Observations
 
-![Field Observation Entry](screenshots/observation-entry.png)
+<img src="screenshots/field-observations.png" width="900">
 
-### Weather Data Integration
+### Environmental Data
 
-![Open-Meteo Integration](screenshots/open-meteo.png)
+<img src="screenshots/open-meteo.png" width="900">
 
-### Sentinel-2 Satellite Analysis
+### Sentinel-2 Analysis
 
-![Sentinel-2 Analysis](screenshots/sentinel2.png)
+<img src="screenshots/sentinel2.png" width="900">
 
-### NDWI Water Analysis
+### NDWI Analysis
 
-![NDWI Analysis](screenshots/ndwi.png)
+<img src="screenshots/ndwi.png" width="900">
 
-### NDVI Vegetation Analysis
+### NDVI Analysis
 
-![NDVI Analysis](screenshots/ndvi.png)
+<img src="screenshots/ndvi.png" width="900">
 
-### Weighted Priority Scoring
+### Priority Scoring
 
-![Priority Scoring](screenshots/priority-scoring.png)
+<img src="screenshots/priority-scoring.png" width="900">
 
-### Evidence-Completeness Gate
+### Evidence Completeness
 
-![Evidence Gate](screenshots/evidence-gate.png)
+<img src="screenshots/evidence-gate.png" width="900">
 
-### Controlled AI Assistant
+### AI Assistant
 
-![AI Assistant](screenshots/ai-assistant.png)
+<img src="screenshots/ai-assistant.png" width="900">
 
-### Restoration Report Generation
+### Report Generation
 
-![Report Generation](screenshots/report-generation.png)
-
+<img src="screenshots/report-generation.png" width="900">
 ---
 
 ## Demonstration
@@ -436,6 +562,24 @@ The project includes documented application workflows covering:
 Further refinement and validation can be performed as the project progresses.
 
 ---
+
+<div align="center">
+
+## 📌 Project Status
+
+| Component | Status |
+|---|---|
+| Desktop Application | Completed / Demonstrated |
+| Lake & Zone Management | Implemented |
+| Field Observation Workflow | Implemented |
+| Priority Scoring | Implemented |
+| Evidence Gate | Implemented |
+| Environmental Data Integration | Demonstrated |
+| AI Assistant | Demonstrated |
+| Report Generation | Demonstrated |
+| Testing | Documented |
+
+</div>
 
 ## Limitations
 

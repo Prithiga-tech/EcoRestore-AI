@@ -871,7 +871,6 @@ The central goal is not to replace environmental expertise, but to provide a tra
 
 </div>
 
-
 <div align="center">
 
 ## 🌿 EcoRestore-AI

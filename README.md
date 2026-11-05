@@ -867,6 +867,13 @@ The central goal is not to replace environmental expertise, but to provide a tra
 
 <div align="center">
 
+<img src="assets/ecorestore-workflow.gif" width="850">
+
+</div>
+
+
+<div align="center">
+
 ## 🌿 EcoRestore-AI
 
 ### Evidence → Assessment → Prioritization → Monitoring → Reporting
@@ -875,8 +882,4 @@ The central goal is not to replace environmental expertise, but to provide a tra
 
 </div>
 
-<div align="center">
 
-<img src="assets/ecorestore-workflow.gif" width="850">
-
-</div>
